@@ -2,25 +2,24 @@ function printCommonElements(mat) {
   let rows = mat.length;
   let cols = mat[0].length;
 
-  let hm = {};
+  let hm = new Map();
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
-      if (hm[mat[i][j]]) {
-        let ele = hm[mat[i][j]];
+      if (hm.has(mat[i][j])) {
+        let ele = hm.get(mat[i][j]);
         if (i != ele[ele.length - 1]) {
-          hm[mat[i][j]] = [...ele, i];
+          hm.set(mat[i][j], [...ele, i]);
         }
       } else {
-        hm[mat[i][j]] = [i];
+        hm.set(mat[i][j], [i]);
       }
     }
   }
-  console.log(hm);
-  for (let key in hm) {
-    if (hm[key] && hm[key].length == rows) {
+  hm.forEach((value, key) => {
+    if (value.length == rows) {
       document.write(key, ", ");
     }
-  }
+  });
 }
 let mat = [
   [1, 2, 1, 4, 8],
