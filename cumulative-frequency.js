@@ -1,3 +1,5 @@
+// O(n) time
+// O(n) space
 function cumulativeFrequencyOfCount(a, n) {
   let hm = new Array(n).fill(0);
 
