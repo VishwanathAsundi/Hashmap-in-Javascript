@@ -1,3 +1,4 @@
+// O(n2) time and O(n) space
 const findThree = function(a, b, c, sum) {
   let map = {};
   for (let i = 0; i < a.length; i++) {
