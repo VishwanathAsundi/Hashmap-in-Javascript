@@ -2,8 +2,6 @@ function areElementsContiguous(a, n) {
   let set = new Set();
   for (let i = 0; i < n; i++) set.add(a[i]);
 
-  console.log(set);
-
   let current = a[0] - 1;
   let count = 1;
 
