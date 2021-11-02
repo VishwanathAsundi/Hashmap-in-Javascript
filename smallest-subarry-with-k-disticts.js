@@ -17,3 +17,5 @@ let arr = [1, 1, 2, 2, 3, 3, 4, 5];
 let n = arr.length;
 let k = 3;
 smallestSub(arr, n, k);
+
+// Using Hash map
